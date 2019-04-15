@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-cn-en">
+<head>
+    <meta charset="UTF-8">  
+    <title>我的</title>
+    <style>
+        table{
+            background-color: gainsboro;
+            margin: 15px auto;
+            width: 210px;
+            height: 250px;
+            border-spacing: 5px; 
+        }
+        #final{
+            border: 3px outset green;
+        }
+        td{
+            height: 30px;
+            text-align: center;
+        }
+        #enterNumber{
+            text-align: right;
+            width: 100%;
+        }
+        input{
+            outline: none;
+            border-radius: 10px;
+            background-color: coral; 
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            font-size: 25px;
+            box-shadow: 3px 5px 2px rgba(100,100,100,.8)
+            
+        }
+    </style>    
+</head>
+<body>
+    <table id='final'>
+        <tr>
+            <td colspan="2"><input type="text" id='enterNumber' value='0' onclick=""></td>
+            <td>
+                <input type="button" value="清除" onclick="enterNumber.value='0' ">
+                <input type="button" value="退格" onclick="backspace()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table id='tab-1'>
+                    <tr>
+                        <td><input type="button" value="sin" onclick="math('sin')"></td>
+                        <td><input type="button" value="cos" onclick="math('cos')"></td>
+                        <td><input type="button" value="tan" onclick="math('tan')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="asin" onclick="math('asin')"></td>
+                        <td><input type="button" value="acon" onclick="math('acos')"></td>
+                        <td><input type="button" value="atan" onclick="math('atan')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="PI" onclick="math('PI')"></td>
+                        <td><input type="button" value="1/x" onclick="math('1/x')"></td>
+                        <td><input type="button" value="exp" onclick="math('exp')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="lnx" onclick="math('lnx')"></td>
+                        <td><input type="button" value="lgx" onclick="math('lgx')"></td>
+                        <td><input type="button" value="n!" onclick="math('n!')"></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table id='tab-2'>
+                    <tr>
+                        <td><input type="button" value="7" onclick="num(7)"></td>
+                        <td><input type="button" value="8" onclick="num(8)"></td>
+                        <td><input type="button" value="9" onclick="num(9)"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="4" onclick="num(4)"></td>
+                        <td><input type="button" value="5" onclick="num(5)"></td>
+                        <td><input type="button" value="6" onclick="num(6)"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="1" onclick="num(1)"></td>
+                        <td><input type="button" value="2" onclick="num(2)"></td>
+                        <td><input type="button" value="3" onclick="num(3)"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="0" onclick="num(0)"></td>
+                        <td><input type="button" value="." onclick ='decimal()'></td>
+                        <td><input type="button" value="=" onclick="compute('=')"></td>
+                    </tr>
+                </table>                
+            </td>
+            <td>
+                <table id="tab-3">
+                    <tr>
+                        <td><input type="button" value="+" onclick="compute('+')"></td>
+                        <td><input type="button" value="取整" onclick="int()"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="-" onclick="compute('-')"></td>
+                        <td><input type="button" value="取余" onclick="compute('%')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="*" onclick="compute('*')"></td>
+                        <td><input type="button" value="x^y" onclick="compute('x^y')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="/" onclick="compute('/')"></td>
+                        <td><input type="button" value="+/-" onclick="plusMinus()"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+<script type="text/javascript">
+    function $(id){
+        return document.getElementById(id);
+    }
+    var Boo = false;
+    var result = 0;
+    var ope;
+    function num(number){
+        var txt = $('enterNumber');
+        if(Boo){
+            txt.value = number;
+            Boo=false;
+        }else{
+            if(txt.value != '0'){
+                txt.value += number;
+            }else{
+                txt.value = number;
+            } 
+        }
+    }
+    function decimal(){
+        var txt =$('enterNumber');
+        if(Boo){
+            txt.value='0.';
+            Boo=false;
+        }else{
+            if(txt.value.indexOf('.')==-1){
+                txt.value += '.';
+            }
+        }
+    }
+    function compute(operator){
+        var onum = $('enterNumber');
+        if(onum.value == ""){
+            onum.value = 0;
+        }
+        Boo = true;
+        switch(ope){
+            case '+':
+                result += parseFloat(onum.value);
+                break;
+            case '-':
+                result -= parseFloat(onum.value);
+                break;
+            case '*':
+                result *= parseFloat(onum.value);
+                break;
+            case '/':
+                result /= parseFloat(onum.value);
+                break;
+            case '=':
+                result = parseFloat(onum.value);
+                break;
+            case '%':
+                result %= parseFloat(onum.value);
+                break;
+            case 'x^y':
+                result = Math.pow(result,onum.value);
+                break;
+            default:
+                result = parseFloat(onum.value);
+                break;     
+        }
+        $('enterNumber').value = result;
+        ope = operator;
+    }
+    function plusMinus(){
+        var onum = $('enterNumber');
+        if(onum.value!=""){
+            onum.value *= -1;
+        }else{
+            return false;
+        }
+    }
+    function backspace(){
+        var back = $('enterNumber');
+        back.value = back.value.substring(0,back.value.length-1);
+        if(back.value==" "){
+           back.value = 0;
+        }
+    }
+    function math(operator){
+        var onum = $('enterNumber');
+        if(onum.value ==""){
+            return false;
+        }
+        Boo = true;
+        with(Math){
+            switch(operator){
+                case 'sin':
+                    result = sin(onum.value);
+                    break;
+                case 'cos':
+                    result = cos(onum.value);
+                    break;
+                case 'tan':
+                    result = tan(onum.value);
+                    break;
+                case 'asin':
+                    result = asin(onum.value);
+                    break;
+                case 'acos':
+                    result = acos(onum.value);
+                    break;
+                case 'atan':
+                    result = atan(onum.value);
+                    break;
+                case 'PI':
+                    result = PI;
+                    break;
+                case '1/x':
+                    result = 1/(onum.value);
+                    break;
+                case 'exp':
+                    result = exp(onum.value);
+                    break;
+                case 'lnx':
+                    result = log(onum.value);
+                    break;
+                case 'lgx':
+                    result = log(onum.value)/log(10);
+                    break;
+                case 'i':
+                    result = floor(onum.value);
+                    break;
+                case 'n!':
+                    result = factorial(onum.value);
+                    break;
+                default:
+                    result = parseFloat(onum.value);
+            }  
+        }
+        $('enterNumber').value=result;
+    }
+    function factorial(a){
+            if(a == 1){
+                return 1;
+            }else{
+                return factorial(a-1)*a;
+            }
+    }
+    function int(){
+        var integer = $('enterNumber');
+        if(integer.value !=""){
+            integer.value = Math.round(integer.value);
+        }else{
+            return false;
+        }
+    }
+    
+</script>
+
+</html> 
