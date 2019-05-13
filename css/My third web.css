@@ -167,17 +167,17 @@ a:hover{
 /*轮播图css结束*/
 /*logo*/
 .content_one,.content_one_final{
-    width:1280px;
+    width: 1280px;
     margin: 0 auto;
     height: 150px;
 }
 .content_one img,.content_one_final img{
     cursor: pointer;
-    padding: 60px 35px;
+    padding: 60px 40px;
 }
 .content_one_final img{
     position: relative;
-    bottom: 200px;
+    bottom: 150px;
     opacity: 0;
 }
 .content_one_final img:hover{
