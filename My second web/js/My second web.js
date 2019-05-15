@@ -1,11 +1,11 @@
 $(function(){
-    //导航栏底部白条开始//
+    //Footer Start//
     $('.ul li').mouseover(function(){
         $(this).addClass('active');
         $(this).siblings().removeClass('active');
     })
-    //导航栏底部白条结束//
-    //侧栏菜单开始//
+    //Footer Over//
+    //Side bar Start//
     $('.slider_btn').click(function(){
         showSlider();
         
@@ -21,8 +21,8 @@ $(function(){
         $('.mask').fadeOut();
         $('.slider').css('right',-300);
     }
-    //侧栏菜单结束//
-    //悬浮回顶部开始//
+    //Side bar Over//
+    //Return Start//
     $(window).scroll(function(){
         if($(window).scrollTop()>3000){
             $('.btn').css('display','block');
@@ -36,5 +36,5 @@ $(function(){
             
         },1000)
     })
-    //悬浮回顶部结束//
+    //Return Over//
 })

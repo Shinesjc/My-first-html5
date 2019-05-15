@@ -1,7 +1,7 @@
 var i =0;
 var time;
 $(document).ready(function(){
-    //轮播图开始
+    //Slideshow start
     $('.ig').eq(0).show().siblings().hide();
     timer();
     $('.left_button').click(function(){
@@ -22,9 +22,9 @@ $(document).ready(function(){
         show();
         timer();
     })
-    //轮播图结束
+    //Slideshow over
 })
-//轮播图开始
+//Slideshow start
 function timer(){
         time = setInterval(function(){
         show();
@@ -37,4 +37,4 @@ function timer(){
 function show(){
     $('.ig').eq(i).fadeIn(300).siblings().fadeOut(300);  
 }
-//轮播图结束
+//Slideshow over
