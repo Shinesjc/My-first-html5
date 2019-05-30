@@ -5,7 +5,9 @@ HTML+CSS+JS
 <p>The web page named 'My third web' is a simple design studio page.<br/>https://shinesjc.github.io/My-first-html5/My%20third%20web/</p>
 <p>All the imgs, css file and js file uploaded</p>
 <P>The web page named 'Web' is a simple enterprise website.(use Bootstrap).<br/>https://shinesjc.github.io/My-first-html5/Web/</p>
-<p>The practise file shows some of my individual exercises.<br/>https://shinesjc.github.io/My-first-html5/Practise/</p>
+<p>The practise file shows some of my individual exercises.
+  <br/>https://shinesjc.github.io/My-first-html5/Practise/calculator
+  <br/>https://shinesjc.github.io/My-first-html5/Practise/SlideShow</p>
 <h2>The Game file show some simple game which mainly use JS</h2>
 <ul>
   <li>IOS Clock<br/>https://shinesjc.github.io/My-first-html5/Game/IOS%20Clock/</li>
