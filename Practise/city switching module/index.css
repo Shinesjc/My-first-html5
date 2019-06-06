@@ -1,0 +1,99 @@
+body{
+	margin: 0;
+	background: rgba(0,0,0,.5);
+}
+.wrapper{
+	/*水平垂直居中*/
+	position: absolute;
+	left: 50%;
+	top:50%;
+	margin-left: -250px;
+	margin-top: -200px; 
+
+	width: 500px;
+	height: 400px;
+	background: #fff;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.main{
+	width: 100%;
+	height: 100%;
+}
+.main .bg{
+	width: 100%;
+	height: 250px;
+}
+.content{
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	margin-top: 50px;
+	height: 50px;
+	line-height: 50px;
+}
+.content span{
+	width: 200px;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+}
+.content .state1{
+	float: left;
+	cursor: pointer;
+}
+.content .state2{
+	float: right;
+	cursor: pointer;
+}
+.btn{
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-image: url('img/point.png');
+	background-size: 100% 100%;
+	vertical-align: middle;
+	cursor: pointer;
+	transition: transform 0.3s linear;
+	z-index: 10;
+}
+.card{
+	position: absolute;
+	left:100%;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	border-radius: 20px;
+	transition: left 0.3s linear;
+	z-index: 100
+}
+.return{
+	font-size: 12px;
+	color: #ccc;
+	display: inline-block;
+	margin: 10px 0 0 20px;
+}
+h2{
+	text-align: center;
+}
+ul{
+	padding: 0;
+	width: 80%;
+	margin: 0 auto;
+}
+ul li{
+	display: inline-block;
+	margin: 7px;
+	list-style: none;
+	width: 28%;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+}
+li:hover{
+	border-color: green;
+	cursor: pointer;
+}

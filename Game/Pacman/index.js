@@ -43,28 +43,28 @@ draw();
 document.onkeydown = function(event){
 	if(event.code =='ArrowRight'){
 		pacman.dir='right';
-		if(map[pacman.r][pacman.l+1] !==1){
+		if(map[pacman.r][pacman.l+1] !=1){
 			map[pacman.r][pacman.l] = 3;
 			pacman.l +=1;
 			map[pacman.r][pacman.l] = 4;
 		}
 	}else if(event.code=='ArrowLeft'){
 		pacman.dir='left'
-		if(map[pacman.r][pacman.l-1] !==1){
+		if(map[pacman.r][pacman.l-1] !=1){
 			map[pacman.r][pacman.l] = 3;
 			pacman.l -=1;
 			map[pacman.r][pacman.l] = 4;
 		}
 	}else if(event.code=='ArrowUp'){
 		pacman.dir='up'
-		if(map[pacman.r-1][pacman.l] !==1){
+		if(map[pacman.r-1][pacman.l] !=1){
 			map[pacman.r][pacman.l] = 3;
 			pacman.r -=1;
 			map[pacman.r][pacman.l] = 4;
 		}
 	}else if(event.code=='ArrowDown'){
 		pacman.dir='down'
-		if(map[pacman.r+1][pacman.l] !==1){
+		if(map[pacman.r+1][pacman.l] !=1){
 			map[pacman.r][pacman.l] = 3;
 			pacman.r +=1;
 			map[pacman.r][pacman.l] = 4;
