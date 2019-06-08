@@ -96,7 +96,7 @@ a:hover{
     border-right: none;
 }
 .show_list:hover .move_list{
-    display: block;
+    display:block;
 }
 .show_list .move_list li:hover{
     color: white;
@@ -140,24 +140,24 @@ a:hover{
 }
 .left_button{
     cursor: pointer;
-    background: #999;
+    background: #fff;
     height: 71px;
     width: 71px;
-    top:50%;
-    left: 22%;
+    top:  55%;
+    left: 12.5%;
     position: absolute;
 }
 .left_button img{
     height: 100%;
-    width:100%;
+    width:  100%;
 }
 .right_button{
     cursor: pointer;
-    background: #999;
+    background: #fff;
     height: 71px;
     width: 71px;
-    top:50%;
-    right: 22%;
+    top:55%;
+    right: 12.5%;
     position: absolute;
 }
 .right_button img{
