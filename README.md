@@ -1,5 +1,5 @@
 # My-first-html5
-HTML+CSS+JS
+HTML,CSS,JavaScript,Bootstrap,JQuery,React.js, Redux
 <h1>This is my practise</h1>
 <p>The web page named 'My second web' is a simple blog page.<br/>https://shinesjc.github.io/My-first-html5/My%20second%20web/</p>
 <p>The web page named 'My third web' is a simple design studio page.<br/>https://shinesjc.github.io/My-first-html5/My%20third%20web/</p>
