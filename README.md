@@ -18,4 +18,4 @@ HTML,CSS,JavaScript,Bootstrap,JQuery,React.js, Redux
 </ul>
 
 H5 form:
-https://github.com/Shinesjc/My-first-html5/blob/master/H5%E8%A1%A8%E5%8D%95/index.html
+>https://shinesjc.github.io/My-first-html5/blob/master/H5%E8%A1%A8%E5%8D%95/index.html
